@@ -42,7 +42,7 @@ func ParseWithFile(target interface{}, path string) error {
 		if err = getJsonValue(target, path); err != nil {
 			return err
 		}
-	case "yml":
+	case "yml", "yaml":
 		if err = getYamlValue(target, path); err != nil {
 			return err
 		}
